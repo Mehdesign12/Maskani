@@ -9,11 +9,11 @@
    ═══════════════════════════════════════════════════════ */
 
 @theme inline {
-  /* Font — Inter Variable from Next.js (injected via --font-inter) */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-arabic: var(--font-noto-arabic), 'Noto Sans Arabic', 'Arabic UI Text',
-    sans-serif;
+  /* Font — Inter/system stack; avoids runtime font fetching during builds */
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+  --font-arabic: 'Noto Sans Arabic', 'Arabic UI Text', Inter, ui-sans-serif,
+    system-ui, sans-serif;
 }
 
 @theme {
@@ -118,4 +118,13 @@ body {
 /* RTL font switching — activated in Phase 2 */
 [dir="rtl"] body {
   font-family: var(--font-arabic);
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
