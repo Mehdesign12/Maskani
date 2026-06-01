@@ -1,0 +1,64 @@
+{
+  "common": {
+    "appName": "Maskani",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Envoyer",
+    "seeAll": "Voir tout",
+    "currency": "MAD"
+  },
+  "nav": {
+    "buy": "Acheter",
+    "rent": "Louer",
+    "newProjects": "Projets neufs",
+    "agencies": "Agences",
+    "estimation": "Estimer",
+    "market": "Données marché",
+    "login": "Connexion",
+    "signup": "Inscription",
+    "dashboard": "Mon espace",
+    "logout": "Déconnexion"
+  },
+  "search": {
+    "placeholder": "Ville, quartier, adresse...",
+    "buy": "Acheter",
+    "rent": "Louer",
+    "results": "{count, plural, =0 {Aucun résultat} one {# annonce} other {# annonces}}",
+    "filters": "Filtres",
+    "sort": "Trier",
+    "map": "Carte",
+    "list": "Liste",
+    "grid": "Grille"
+  },
+  "listing": {
+    "bedrooms": "{n, plural, =0 {Studio} one {# chambre} other {# chambres}}",
+    "bathrooms": "{n, plural, one {# salle de bain} other {# salles de bain}}",
+    "area": "{n} m²",
+    "price": "{price} MAD",
+    "pricePerSqm": "{price} MAD/m²",
+    "verified": "Annonce vérifiée",
+    "premium": "Premium",
+    "featured": "À la une",
+    "contact": "Contacter",
+    "favorite": "Sauvegarder",
+    "share": "Partager",
+    "report": "Signaler"
+  },
+  "auth": {
+    "loginTitle": "Connexion",
+    "signupTitle": "Créer un compte",
+    "email": "Email",
+    "password": "Mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "loginWithGoogle": "Continuer avec Google",
+    "noAccount": "Pas encore de compte ?",
+    "alreadyAccount": "Déjà un compte ?"
+  }
+}

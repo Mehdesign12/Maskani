@@ -1,0 +1,64 @@
+{
+  "common": {
+    "appName": "مسكاني",
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "back": "رجوع",
+    "next": "التالي",
+    "submit": "إرسال",
+    "seeAll": "عرض الكل",
+    "currency": "درهم"
+  },
+  "nav": {
+    "buy": "شراء",
+    "rent": "إيجار",
+    "newProjects": "مشاريع جديدة",
+    "agencies": "الوكالات",
+    "estimation": "التقييم",
+    "market": "بيانات السوق",
+    "login": "تسجيل الدخول",
+    "signup": "إنشاء حساب",
+    "dashboard": "لوحتي",
+    "logout": "خروج"
+  },
+  "search": {
+    "placeholder": "المدينة، الحي، العنوان...",
+    "buy": "شراء",
+    "rent": "إيجار",
+    "results": "{count} إعلان",
+    "filters": "تصفية",
+    "sort": "ترتيب",
+    "map": "الخريطة",
+    "list": "قائمة",
+    "grid": "شبكة"
+  },
+  "listing": {
+    "bedrooms": "{n} غرف",
+    "bathrooms": "{n} حمامات",
+    "area": "{n} م²",
+    "price": "{price} درهم",
+    "pricePerSqm": "{price} درهم/م²",
+    "verified": "إعلان موثق",
+    "premium": "مميز",
+    "featured": "في الواجهة",
+    "contact": "تواصل",
+    "favorite": "حفظ",
+    "share": "مشاركة",
+    "report": "إبلاغ"
+  },
+  "auth": {
+    "loginTitle": "تسجيل الدخول",
+    "signupTitle": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "loginWithGoogle": "المتابعة مع Google",
+    "noAccount": "ليس لديك حساب؟",
+    "alreadyAccount": "لديك حساب بالفعل؟"
+  }
+}

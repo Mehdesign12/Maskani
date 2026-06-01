@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════
+   MASKANI DESIGN TOKENS
+   Reference: DESIGN.md (Airbnb pattern, adapted for Morocco)
+   Accent: Terracotta #E05C1A — distinct Moroccan identity,
+   replaces Airbnb's #ff385c coral (proprietary brand color)
+   Font: Inter Variable — replaces proprietary Airbnb Cereal VF
+   ═══════════════════════════════════════════════════════ */
+
+@theme inline {
+  /* Font — Inter Variable from Next.js (injected via --font-inter) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-arabic: var(--font-noto-arabic), 'Noto Sans Arabic', 'Arabic UI Text',
+    sans-serif;
+}
+
+@theme {
+  /* ── Brand ───────────────────────────────────────── */
+  --color-brand:      #E05C1A;
+  --color-brand-deep: #B84A12;
+
+  /* ── Neutrals (Airbnb-inspired clean palette) ────── */
+  --color-carbon:  #222222;
+  --color-slate:   #6a6a6a;
+  --color-silver:  #c1c1c1;
+  --color-stone:   #b0b0b0;
+  --color-pebble:  #dddddd;
+  --color-mist:    #ebebeb;
+  --color-fog:     #f7f7f7;
+  --color-cloud:   #ffffff;
+
+  /* ── Typography scale ─────────────────────────────
+     Matches DESIGN.md — compact, information-dense    */
+  --text-caption:    11px;
+  --text-body:       14px;
+  --text-heading-sm: 20px;
+  --text-heading:    22px;
+  --text-display:    28px;
+
+  --leading-caption:    1.29;
+  --leading-body:       1.43;
+  --leading-heading-sm: 1.25;
+  --leading-heading:    1.23;
+  --leading-display:    1.18;
+
+  --tracking-caption:    0.04em;
+  --tracking-body:      -0.009em;
+  --tracking-heading:   -0.009em;
+  --tracking-display:   -0.02em;
+
+  /* ── Border radius vocabulary ─────────────────────
+     Never mix arbitrary values — use only these       */
+  --radius-badge:   4px;
+  --radius-btn:     8px;
+  --radius-input:   14px;
+  --radius-card:    20px;
+  --radius-search:  20px;
+  --radius-pill:    32px;
+
+  /* ── Elevation ────────────────────────────────────
+     Three-value shadow stack from DESIGN.md           */
+  --shadow-elevated:
+    rgba(0, 0, 0, 0.02) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.04) 0px 2px 6px 0px,
+    rgba(0, 0, 0, 0.10) 0px 4px 8px 0px;
+  --shadow-card-hover:
+    rgba(0, 0, 0, 0.02) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.16) 0px 2px 4px 0px;
+
+  /* ── Layout ───────────────────────────────────────── */
+  --page-max-width: 1760px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   SHADCN/UI CSS VARIABLE MAPPING
+   Maps Maskani tokens → shadcn component expectations
+   ═══════════════════════════════════════════════════════ */
+:root {
+  --background: 0 0% 97%;       /* fog     #f7f7f7 */
+  --foreground: 0 0% 13%;       /* carbon  #222222 */
+  --card: 0 0% 100%;            /* cloud   #ffffff */
+  --card-foreground: 0 0% 13%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 13%;
+  --primary: 20 79% 49%;        /* brand   #E05C1A */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 97%;
+  --secondary-foreground: 0 0% 13%;
+  --muted: 0 0% 97%;
+  --muted-foreground: 0 0% 42%; /* slate   #6a6a6a */
+  --accent: 0 0% 97%;
+  --accent-foreground: 0 0% 13%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 92%;           /* mist    #ebebeb */
+  --input: 0 0% 92%;
+  --ring: 20 79% 49%;
+  --radius: 8px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════════ */
+* {
+  border-color: var(--color-mist);
+}
+
+body {
+  background-color: var(--color-fog);
+  color: var(--color-carbon);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RTL font switching — activated in Phase 2 */
+[dir="rtl"] body {
+  font-family: var(--font-arabic);
+}
