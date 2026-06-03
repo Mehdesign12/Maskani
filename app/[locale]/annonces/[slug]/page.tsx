@@ -308,7 +308,7 @@ export default function ListingDetailPage({ params }: ListingPageProps) {
               <div className="space-y-2.5">
                 <a href={`tel:${listing.agencyPhone.replaceAll(' ', '')}`} className="flex h-12 items-center justify-center gap-2 rounded-[8px] bg-[#B19272] text-[14px] font-semibold text-white transition-colors hover:bg-[#9a7d61]">
                   <Phone className="h-4 w-4" />
-                  Appeler l'agence
+                  Appeler l&apos;agence
                 </a>
                 <a href={`mailto:${listing.agencyEmail}`} className="flex h-12 items-center justify-center gap-2 rounded-[8px] border border-[#222222] bg-white text-[14px] font-semibold text-[#222222] transition-colors hover:bg-[#f7f7f7]">
                   <Mail className="h-4 w-4" />
