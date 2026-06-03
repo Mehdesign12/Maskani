@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { getLocale } from 'next-intl/server'
 import { Menu } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
@@ -16,21 +17,15 @@ export async function Navbar() {
   return (
     <header className="sticky top-0 z-50 h-20 border-b border-[#ebebeb] bg-white/95 backdrop-blur-xl">
       <div className="mx-auto flex h-full max-w-[1760px] items-center justify-between gap-8 px-6">
-        <Link href="/" className="flex shrink-0 items-center gap-3" aria-label="Maskani">
-          <svg width="32" height="40" viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="navbar-logo-grad" x1="0" y1="0" x2="36" y2="44" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#D9BB9C"/>
-                <stop offset="1" stopColor="#B19272"/>
-              </linearGradient>
-            </defs>
-            <path d="M2 43 L2 24 C2 12 10 1 18 1 C26 1 34 12 34 24 L34 43 Z" fill="url(#navbar-logo-grad)"/>
-            <path d="M7 39 L7 26 C7 17 12 9 18 9 C24 9 29 17 29 26 L29 39 Z" fill="white"/>
-            <path d="M18 28 L21 33 L18 38 L15 33 Z" fill="url(#navbar-logo-grad)"/>
-          </svg>
-          <span className="bg-gradient-to-br from-[#D9BB9C] to-[#B19272] bg-clip-text text-[22px] font-bold tracking-[-0.02em] text-transparent">
-            Maskani
-          </span>
+        <Link href="/" className="flex shrink-0 items-center" aria-label="Maskani">
+          <Image
+            src="https://ebrxvvqyvdoqfahmckpo.supabase.co/storage/v1/object/public/Logo/Group%20265.png"
+            alt="Maskani"
+            width={160}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden flex-1 items-center justify-center gap-1 lg:flex">
