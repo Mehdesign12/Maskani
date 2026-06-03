@@ -82,7 +82,7 @@ export function SearchBar() {
           <button
             onClick={handleSearch}
             aria-label="Rechercher"
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-[32px] bg-[#E05C1A] px-5 text-[14px] font-semibold text-white transition-colors hover:bg-[#B84A12] active:scale-[0.98] sm:w-12 sm:px-0"
+            className="flex h-12 w-full items-center justify-center gap-2 rounded-[32px] bg-[#B19272] px-5 text-[14px] font-semibold text-white transition-colors hover:bg-[#9a7d61] active:scale-[0.98] sm:w-12 sm:px-0"
           >
             <Search className="h-5 w-5" strokeWidth={2.5} />
             <span className="sm:hidden">Rechercher</span>

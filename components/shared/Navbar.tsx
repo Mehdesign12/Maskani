@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { getLocale } from 'next-intl/server'
 import { Menu } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
@@ -16,11 +17,15 @@ export async function Navbar() {
   return (
     <header className="sticky top-0 z-50 h-20 border-b border-[#ebebeb] bg-white/95 backdrop-blur-xl">
       <div className="mx-auto flex h-full max-w-[1760px] items-center justify-between gap-8 px-6">
-        <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label="Maskani">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#E05C1A] shadow-[inset_0_-1px_0_rgba(0,0,0,0.12)]">
-            <span className="text-[16px] font-bold text-white">م</span>
-          </div>
-          <span className="text-[20px] font-bold tracking-[-0.02em] text-[#222222]">maskani</span>
+        <Link href="/" className="flex shrink-0 items-center" aria-label="Maskani">
+          <Image
+            src="https://ebrxvvqyvdoqfahmckpo.supabase.co/storage/v1/object/public/Logo/Group%20265.png"
+            alt="Maskani"
+            width={160}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden flex-1 items-center justify-center gap-1 lg:flex">
@@ -53,7 +58,7 @@ export async function Navbar() {
 
           <Link
             href="/inscription"
-            className="rounded-[8px] bg-[#E05C1A] px-4 py-2 text-[14px] font-semibold text-white transition-colors hover:bg-[#B84A12] whitespace-nowrap"
+            className="rounded-[8px] bg-[#B19272] px-4 py-2 text-[14px] font-semibold text-white transition-colors hover:bg-[#9a7d61] whitespace-nowrap"
           >
             {locale === 'ar' ? 'نشر إعلان' : 'Publier'}
           </Link>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 
 const footerLinks = {
@@ -101,13 +102,14 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-[#ebebeb]">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-[#E05C1A] rounded-[7px] flex items-center justify-center">
-              <span className="text-white font-bold text-[12px]">م</span>
-            </div>
-            <span className="text-[16px] font-bold text-[#222222] tracking-[-0.02em]">
-              maskani
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="https://ebrxvvqyvdoqfahmckpo.supabase.co/storage/v1/object/public/Logo/Group%20265.png"
+              alt="Maskani"
+              width={120}
+              height={30}
+              className="h-7 w-auto"
+            />
           </Link>
 
           <p className="text-[12px] text-[#6a6a6a] text-center">

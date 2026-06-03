@@ -3,7 +3,7 @@
 /* ═══════════════════════════════════════════════════════
    MASKANI DESIGN TOKENS
    Reference: DESIGN.md (Airbnb pattern, adapted for Morocco)
-   Accent: Terracotta #E05C1A — distinct Moroccan identity,
+   Accent: Sand gold #D9BB9C / #B19272 — distinct Moroccan identity,
    replaces Airbnb's #ff385c coral (proprietary brand color)
    Font: Inter Variable — replaces proprietary Airbnb Cereal VF
    ═══════════════════════════════════════════════════════ */
@@ -18,8 +18,8 @@
 
 @theme {
   /* ── Brand ───────────────────────────────────────── */
-  --color-brand:      #E05C1A;
-  --color-brand-deep: #B84A12;
+  --color-brand:      #D9BB9C;
+  --color-brand-deep: #B19272;
 
   /* ── Neutrals (Airbnb-inspired clean palette) ────── */
   --color-carbon:  #222222;
@@ -84,7 +84,7 @@
   --card-foreground: 0 0% 13%;
   --popover: 0 0% 100%;
   --popover-foreground: 0 0% 13%;
-  --primary: 20 79% 49%;        /* brand   #E05C1A */
+  --primary: 33 40% 73%;        /* brand   #D9BB9C */
   --primary-foreground: 0 0% 100%;
   --secondary: 0 0% 97%;
   --secondary-foreground: 0 0% 13%;
@@ -96,7 +96,7 @@
   --destructive-foreground: 0 0% 100%;
   --border: 0 0% 92%;           /* mist    #ebebeb */
   --input: 0 0% 92%;
-  --ring: 20 79% 49%;
+  --ring: 33 40% 73%;
   --radius: 8px;
 }
 
