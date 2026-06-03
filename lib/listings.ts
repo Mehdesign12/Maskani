@@ -100,7 +100,7 @@ export const FEATURED_LISTINGS: ListingDetailData[] = [
     isVerified: true,
     agency: 'Atlas Living',
     description:
-      'Villa contemporaine au calme, organisée autour d'un jardin paysager et d'une piscine plein sud. Volumes généreux, grandes baies vitrées, espaces de réception ouverts et dépendance personnel.',
+      "Villa contemporaine au calme, organisée autour d'un jardin paysager et d'une piscine plein sud. Volumes généreux, grandes baies vitrées, espaces de réception ouverts et dépendance personnel.",
     highlights: [
       { label: 'Terrain', value: '1 100 m²' },
       { label: 'Disponibilité', value: 'Libre à la vente' },
@@ -148,9 +148,9 @@ export const FEATURED_LISTINGS: ListingDetailData[] = [
     isPremium: true,
     agency: 'Médina Patrimoine',
     description:
-      'Riad exploitable en maison d'hôtes, rénové avec patio, bassin, terrasse panoramique et six suites. Emplacement recherché à proximité des circuits touristiques de la Médina.',
+      "Riad exploitable en maison d'hôtes, rénové avec patio, bassin, terrasse panoramique et six suites. Emplacement recherché à proximité des circuits touristiques de la Médina.",
     highlights: [
-      { label: 'Exploitation', value: 'Maison d'hôtes' },
+      { label: 'Exploitation', value: "Maison d'hôtes" },
       { label: 'Suites', value: '6 chambres' },
       { label: 'Statut', value: 'Autorisation vérifiée' },
     ],
