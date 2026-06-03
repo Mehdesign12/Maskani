@@ -102,11 +102,19 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-[#ebebeb]">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-[#E05C1A] rounded-[7px] flex items-center justify-center">
-              <span className="text-white font-bold text-[12px]">م</span>
-            </div>
-            <span className="text-[16px] font-bold text-[#222222] tracking-[-0.02em]">
-              maskani
+            <svg width="24" height="30" viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="footer-logo-grad" x1="0" y1="0" x2="36" y2="44" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#D9BB9C"/>
+                  <stop offset="1" stopColor="#B19272"/>
+                </linearGradient>
+              </defs>
+              <path d="M2 43 L2 24 C2 12 10 1 18 1 C26 1 34 12 34 24 L34 43 Z" fill="url(#footer-logo-grad)"/>
+              <path d="M7 39 L7 26 C7 17 12 9 18 9 C24 9 29 17 29 26 L29 39 Z" fill="white"/>
+              <path d="M18 28 L21 33 L18 38 L15 33 Z" fill="url(#footer-logo-grad)"/>
+            </svg>
+            <span className="bg-gradient-to-br from-[#D9BB9C] to-[#B19272] bg-clip-text text-[16px] font-bold tracking-[-0.02em] text-transparent">
+              Maskani
             </span>
           </Link>
 

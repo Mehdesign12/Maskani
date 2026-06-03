@@ -197,7 +197,7 @@ export default async function HomePage({
           <div className="relative mx-auto grid max-w-[1760px] gap-12 px-6 pb-16 pt-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,0.8fr)] lg:items-center lg:pb-20 lg:pt-16">
             <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:text-start">
               <div className="mb-5 inline-flex items-center gap-2 rounded-[32px] border border-[#ebebeb] bg-white px-3.5 py-1.5 text-[12px] font-semibold text-[#222222] shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#E05C1A]" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[#B19272]" />
                 Immobilier vérifié, quartier par quartier
               </div>
 
@@ -240,7 +240,7 @@ export default async function HomePage({
                       <p className="text-[14px] font-semibold tracking-[-0.009em]">Racine, Casablanca</p>
                       <p className="mt-0.5 text-[12px] text-[#6a6a6a]">128 m² · 3 ch. · vérifié</p>
                     </div>
-                    <BadgeCheck className="h-5 w-5 shrink-0 text-[#E05C1A]" />
+                    <BadgeCheck className="h-5 w-5 shrink-0 text-[#B19272]" />
                   </div>
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default async function HomePage({
             <div className="grid gap-3 md:grid-cols-3">
               {TRUST_SIGNALS.map(({ icon: Icon, title, text }) => (
                 <div key={title} className="rounded-[20px] bg-[#f7f7f7] p-6 transition-colors hover:bg-[#f0f0f0]">
-                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#E05C1A] shadow-[0_1px_0_rgba(0,0,0,0.04)]">
+                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#B19272] shadow-[0_1px_0_rgba(0,0,0,0.04)]">
                     <Icon className="h-5 w-5" strokeWidth={1.8} />
                   </div>
                   <h3 className="text-[15px] font-bold tracking-[-0.009em] text-[#222222]">{title}</h3>
@@ -383,7 +383,7 @@ export default async function HomePage({
                 <p className="max-w-xl text-[15px] leading-[1.6] text-white/65 lg:text-end">
                   Un espace professionnel pensé pour mettre en avant les biens réellement disponibles, suivre les performances et rassurer les acheteurs dès la première visite.
                 </p>
-                <Link href="/inscription" className="inline-flex w-fit items-center rounded-[8px] bg-[#E05C1A] px-5 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#B84A12]">
+                <Link href="/inscription" className="inline-flex w-fit items-center rounded-[8px] bg-[#B19272] px-5 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#9a7d61]">
                   Rejoindre Maskani
                   <ArrowRight className="ms-2 h-4 w-4 rtl:rotate-180" />
                 </Link>

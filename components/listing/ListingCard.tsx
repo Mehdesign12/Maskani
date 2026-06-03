@@ -72,7 +72,7 @@ export function ListingCard({ listing, className = '', priority = false }: Listi
               className="inline-flex items-center gap-1 rounded-[4px] bg-white px-2.5 py-1 text-[11px] font-semibold tracking-[0.04em] text-[#222222]"
               style={{ filter: 'drop-shadow(rgba(0,0,0,0.25) 0px 2px 6px)' }}
             >
-              {isVerified && <BadgeCheck className="h-3.5 w-3.5 text-[#E05C1A]" strokeWidth={2} />}
+              {isVerified && <BadgeCheck className="h-3.5 w-3.5 text-[#B19272]" strokeWidth={2} />}
               {isPremium ? 'Premium' : 'Vérifié'}
             </span>
           )}
