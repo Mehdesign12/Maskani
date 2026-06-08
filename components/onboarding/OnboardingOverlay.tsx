@@ -4,10 +4,12 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Building2, Handshake, Sofa, X, ArrowRight, Check } from 'lucide-react'
 import { useIntentStore, type UserIntent } from '@/store/intentStore'
+import { useRouter } from '@/i18n/navigation'
 
 const INTENTS = [
   {
     id: 'immobilier' as UserIntent,
+    href: '/' as const,
     icon: Building2,
     iconBg: 'bg-[#fdf4e7]',
     iconColor: 'text-[#B19272]',
@@ -21,6 +23,7 @@ const INTENTS = [
   },
   {
     id: 'prestataires' as UserIntent,
+    href: '/prestataires' as const,
     icon: Handshake,
     iconBg: 'bg-[#EEF2FF]',
     iconColor: 'text-[#4F6AE8]',
@@ -34,6 +37,7 @@ const INTENTS = [
   },
   {
     id: 'ameublement' as UserIntent,
+    href: null,
     icon: Sofa,
     iconBg: 'bg-[#F0FDF4]',
     iconColor: 'text-[#16A34A]',
@@ -51,12 +55,16 @@ export function OnboardingOverlay() {
   const { hasOnboarded, setIntent, dismiss } = useIntentStore()
   const [mounted, setMounted] = useState(false)
   const [selected, setSelected] = useState<UserIntent | null>(null)
+  const router = useRouter()
 
   useEffect(() => { setMounted(true) }, [])
 
-  const handleSelect = (id: UserIntent) => {
+  const handleSelect = (id: UserIntent, href: string | null) => {
     setSelected(id)
-    setTimeout(() => setIntent(id), 380)
+    setTimeout(() => {
+      setIntent(id)
+      if (href) router.push(href as '/')
+    }, 380)
   }
 
   const show = mounted && !hasOnboarded
@@ -116,7 +124,7 @@ export function OnboardingOverlay() {
                 return (
                   <motion.button
                     key={id}
-                    onClick={() => handleSelect(id)}
+                    onClick={() => handleSelect(id, href)}
                     className={[
                       'group relative text-left rounded-[20px] border-2 p-6 transition-all duration-200',
                       isSelected

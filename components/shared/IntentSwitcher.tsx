@@ -4,21 +4,24 @@ import { useEffect, useRef, useState } from 'react'
 import { Building2, Handshake, Sofa, ChevronDown, Check, type LucideIcon } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useIntentStore, type UserIntent } from '@/store/intentStore'
+import { useRouter } from '@/i18n/navigation'
 
 const INTENTS: {
   id: UserIntent
+  href: string | null
   icon: LucideIcon
   label: string
   color: string
   comingSoon: boolean
 }[] = [
-  { id: 'immobilier', icon: Building2, label: 'Immobilier', color: 'text-[#B19272]', comingSoon: false },
-  { id: 'prestataires', icon: Handshake, label: 'Prestataires', color: 'text-[#4F6AE8]', comingSoon: false },
-  { id: 'ameublement', icon: Sofa, label: 'Ameublement', color: 'text-[#16A34A]', comingSoon: true },
+  { id: 'immobilier',   href: '/',              icon: Building2, label: 'Immobilier',   color: 'text-[#B19272]', comingSoon: false },
+  { id: 'prestataires', href: '/prestataires',  icon: Handshake, label: 'Prestataires', color: 'text-[#4F6AE8]', comingSoon: false },
+  { id: 'ameublement',  href: null,             icon: Sofa,      label: 'Ameublement',  color: 'text-[#16A34A]', comingSoon: true  },
 ]
 
 export function IntentSwitcher() {
   const { intent, setIntent, reopen } = useIntentStore()
+  const router = useRouter()
   const [mounted, setMounted] = useState(false)
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -81,7 +84,7 @@ export function IntentSwitcher() {
               </p>
             </div>
 
-            {INTENTS.map(({ id, icon: ItemIcon, label, color, comingSoon }) => (
+            {INTENTS.map(({ id, href, icon: ItemIcon, label, color, comingSoon }) => (
               <button
                 key={id}
                 role="option"
@@ -89,6 +92,7 @@ export function IntentSwitcher() {
                 onClick={() => {
                   setIntent(id)
                   setOpen(false)
+                  if (href) router.push(href as '/')
                 }}
                 className={[
                   'flex w-full items-center gap-2.5 px-3 py-2.5 text-[13px] transition-colors',
