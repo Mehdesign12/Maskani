@@ -1,13 +1,13 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { Building2, Handshake, Sofa, ChevronDown, Check } from 'lucide-react'
+import { Building2, Handshake, Sofa, ChevronDown, Check, type LucideIcon } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useIntentStore, type UserIntent } from '@/store/intentStore'
 
 const INTENTS: {
   id: UserIntent
-  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>
+  icon: LucideIcon
   label: string
   color: string
   comingSoon: boolean
