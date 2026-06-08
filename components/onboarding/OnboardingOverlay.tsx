@@ -37,7 +37,7 @@ const INTENTS = [
   },
   {
     id: 'ameublement' as UserIntent,
-    href: null,
+    href: '/ameublement' as const,
     icon: Sofa,
     iconBg: 'bg-[#F0FDF4]',
     iconColor: 'text-[#16A34A]',
@@ -45,9 +45,9 @@ const INTENTS = [
     accentBg: 'bg-[#f7fef9]',
     accentRing: 'shadow-[0_0_0_4px_rgba(22,163,74,0.10)]',
     accentText: 'text-[#16A34A]',
-    label: 'Meubler mon bien',
-    description: 'Mobilier, artisans et décorateurs d\'intérieur certifiés.',
-    comingSoon: true,
+    label: 'Ameublement & Accessoires',
+    description: 'Mobilier, artisanat marocain et décoration d\'intérieur sélectionnés.',
+    comingSoon: false,
   },
 ]
 
