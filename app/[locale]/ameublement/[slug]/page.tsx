@@ -7,7 +7,8 @@ import { Navbar } from '@/components/shared/Navbar'
 import { Footer } from '@/components/shared/Footer'
 import { getProduitBySlug, getSimilarProduits, PRODUITS } from '@/lib/produits'
 import { ImageGallery } from '@/components/ameublement/ImageGallery'
-import { ProduitCard, CATEGORY_META } from '@/components/ameublement/ProduitCard'
+import { ProduitCard } from '@/components/ameublement/ProduitCard'
+import { CATEGORY_META } from '@/lib/category-meta'
 import type { Produit } from '@/types/produit'
 
 export async function generateStaticParams() {

@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from 'react'
 import { SlidersHorizontal, X, Search, ChevronDown } from 'lucide-react'
-import { ProduitCard, CATEGORY_META } from './ProduitCard'
+import { ProduitCard } from './ProduitCard'
+import { CATEGORY_META } from '@/lib/category-meta'
 import type { ProduitCardData, ProduitCategory, ProduitStyle } from '@/types/produit'
 
 interface ProduitsDirectoryProps {
