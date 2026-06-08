@@ -1,6 +1,7 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { SlidersHorizontal, X, Search, ChevronDown } from 'lucide-react'
 import { ProduitCard } from './ProduitCard'
 import { CATEGORY_META } from '@/lib/category-meta'
@@ -36,6 +37,16 @@ export function ProduitsDirectory({ produits }: ProduitsDirectoryProps) {
   const [sort, setSort] = useState<SortId>('popular')
   const [showFilters, setShowFilters] = useState(false)
   const [sortOpen, setSortOpen] = useState(false)
+
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    const cat = searchParams.get('cat')
+    if (cat && Object.prototype.hasOwnProperty.call(CATEGORY_META, cat)) {
+      setActiveCategory(cat as ProduitCategory)
+      document.getElementById('catalogue')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [searchParams])
 
   const categories = Object.entries(CATEGORY_META) as [ProduitCategory, { bg: string; text: string; label: string; emoji: string }][]
 

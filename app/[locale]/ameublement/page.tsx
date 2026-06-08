@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { Suspense } from 'react'
 import { setRequestLocale } from 'next-intl/server'
 import { Armchair, Star, Truck, Shield, MessageCircle } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
 import { Navbar } from '@/components/shared/Navbar'
 import { Footer } from '@/components/shared/Footer'
 import { getProduitCardData } from '@/lib/produits'
@@ -15,72 +17,84 @@ export const metadata: Metadata = {
 const ROOMS = [
   {
     label: 'Salon',
+    catKey: 'salon',
     emoji: '🛋️',
     image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=450&fit=crop',
     accent: 'from-amber-900/60',
   },
   {
     label: 'Chambre',
+    catKey: 'chambre',
     emoji: '🛏️',
     image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&h=450&fit=crop',
     accent: 'from-purple-900/60',
   },
   {
     label: 'Cuisine',
+    catKey: 'cuisine',
     emoji: '🍳',
     image: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&h=450&fit=crop',
     accent: 'from-red-900/60',
   },
   {
     label: 'Salle de bain',
+    catKey: 'salle-de-bain',
     emoji: '🚿',
     image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=450&fit=crop',
     accent: 'from-sky-900/60',
   },
   {
     label: 'Décoration',
+    catKey: 'decoration',
     emoji: '🎨',
     image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=450&fit=crop',
     accent: 'from-pink-900/60',
   },
   {
     label: 'Luminaires',
+    catKey: 'luminaires',
     emoji: '💡',
     image: 'https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=600&h=450&fit=crop',
     accent: 'from-orange-900/60',
   },
   {
     label: 'Tapis & Textiles',
+    catKey: 'tapis-textiles',
     emoji: '🪡',
     image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&h=450&fit=crop',
     accent: 'from-green-900/60',
   },
   {
     label: 'Terrasse',
+    catKey: 'terrasse',
     emoji: '🌿',
     image: 'https://images.unsplash.com/photo-1532635241-17e820acc59f?w=600&h=450&fit=crop',
     accent: 'from-emerald-900/60',
   },
   {
     label: 'Accessoires',
+    catKey: 'accessoires',
     emoji: '🪴',
     image: 'https://images.unsplash.com/photo-1567225557594-88887e55ce7a?w=600&h=450&fit=crop',
     accent: 'from-fuchsia-900/60',
   },
   {
     label: 'Domotique',
+    catKey: 'domotique',
     emoji: '🏠',
     image: 'https://images.unsplash.com/photo-1558618047-3caa1a3e8b58?w=600&h=450&fit=crop',
     accent: 'from-blue-900/60',
   },
   {
     label: 'Bureau',
+    catKey: 'bureau',
     emoji: '🖥️',
     image: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&h=450&fit=crop',
     accent: 'from-teal-900/60',
   },
   {
     label: 'Enfants',
+    catKey: 'enfants',
     emoji: '🧸',
     image: 'https://images.unsplash.com/photo-1566140967404-b8b3932483f5?w=600&h=450&fit=crop',
     accent: 'from-yellow-900/60',
@@ -171,10 +185,11 @@ export default async function AmeublementPage({
         </div>
 
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
-          {ROOMS.map(({ label, emoji, image, accent }) => (
-            <div
+          {ROOMS.map(({ label, catKey, emoji, image, accent }) => (
+            <Link
               key={label}
-              className="group relative overflow-hidden rounded-[18px] cursor-pointer"
+              href={`/ameublement?cat=${catKey}#catalogue` as '/ameublement'}
+              className="group relative overflow-hidden rounded-[18px]"
               style={{ aspectRatio: '4/3' }}
             >
               <Image
@@ -189,7 +204,7 @@ export default async function AmeublementPage({
                 <p className="text-[18px]">{emoji}</p>
                 <p className="text-[13px] font-bold text-white">{label}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -269,7 +284,7 @@ export default async function AmeublementPage({
       </section>
 
       {/* ── Product catalog ── */}
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <section id="catalogue" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mb-8 flex items-end justify-between">
           <div>
             <h2 className="text-[22px] font-bold tracking-[-0.02em] text-[#222222] sm:text-[28px]">
@@ -281,7 +296,9 @@ export default async function AmeublementPage({
           </div>
         </div>
 
-        <ProduitsDirectory produits={produits} />
+        <Suspense fallback={<div className="py-16 text-center text-[14px] text-[#888888]">Chargement…</div>}>
+          <ProduitsDirectory produits={produits} />
+        </Suspense>
       </section>
     </main>
     <Footer />
