@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { MapPin, Star, Truck, MessageCircle } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
