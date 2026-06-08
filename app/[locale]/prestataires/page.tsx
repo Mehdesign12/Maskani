@@ -164,7 +164,7 @@ export default async function PresatairesPage({
                 Des professionnels sélectionnés, pas juste listés.
               </h2>
               <p className="mt-4 max-w-md text-[14px] leading-[1.6] text-[#6a6a6a]">
-                Avant d'apparaître sur Maskani, chaque prestataire passe par un processus de vérification : diplômes, assurances professionnelles, historique de projets et contrôle des avis. Pas de faux profils, pas de fake avis.
+                Avant d&apos;apparaître sur Maskani, chaque prestataire passe par un processus de vérification : diplômes, assurances professionnelles, historique de projets et contrôle des avis. Pas de faux profils, pas de fake avis.
               </p>
             </div>
             <div className="grid gap-3 md:grid-cols-3">
