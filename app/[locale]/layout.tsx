@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing, type Locale } from '@/i18n/routing'
+import { OnboardingOverlay } from '@/components/onboarding/OnboardingOverlay'
 import '../globals.css'
 
 export const metadata: Metadata = {
@@ -40,6 +41,7 @@ export default async function LocaleLayout({
     >
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <OnboardingOverlay />
           {children}
         </NextIntlClientProvider>
       </body>

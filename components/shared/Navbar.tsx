@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { getLocale } from 'next-intl/server'
 import { Menu } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
+import { IntentSwitcher } from '@/components/shared/IntentSwitcher'
 
 export async function Navbar() {
   const locale = await getLocale()
@@ -29,6 +30,10 @@ export async function Navbar() {
         </Link>
 
         <nav className="hidden flex-1 items-center justify-center gap-1 lg:flex">
+          <IntentSwitcher />
+
+          <div className="mx-2 h-5 w-px bg-[#e8e8e8]" aria-hidden="true" />
+
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
