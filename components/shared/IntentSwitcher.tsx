@@ -13,7 +13,7 @@ const INTENTS: {
   comingSoon: boolean
 }[] = [
   { id: 'immobilier', icon: Building2, label: 'Immobilier', color: 'text-[#B19272]', comingSoon: false },
-  { id: 'prestataires', icon: Handshake, label: 'Prestataires', color: 'text-[#4F6AE8]', comingSoon: true },
+  { id: 'prestataires', icon: Handshake, label: 'Prestataires', color: 'text-[#4F6AE8]', comingSoon: false },
   { id: 'ameublement', icon: Sofa, label: 'Ameublement', color: 'text-[#16A34A]', comingSoon: true },
 ]
 

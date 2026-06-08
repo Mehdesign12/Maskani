@@ -30,7 +30,7 @@ const INTENTS = [
     accentText: 'text-[#4F6AE8]',
     label: 'Trouver un prestataire',
     description: 'Notaires, agents, diagnostiqueurs, architectes et plus.',
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     id: 'ameublement' as UserIntent,
