@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 import { setRequestLocale } from 'next-intl/server'
 import { ArrowLeft, MessageCircle, Phone, Star, Truck, Package, CheckCircle, Globe } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
