@@ -46,20 +46,44 @@ const ROOMS = [
   {
     label: 'Luminaires',
     emoji: '💡',
-    image: 'https://images.unsplash.com/photo-1513506003901-1e6a35b7e5c3?w=600&h=450&fit=crop',
+    image: 'https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=600&h=450&fit=crop',
     accent: 'from-orange-900/60',
   },
   {
     label: 'Tapis & Textiles',
     emoji: '🪡',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=450&fit=crop',
+    image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&h=450&fit=crop',
     accent: 'from-green-900/60',
   },
   {
     label: 'Terrasse',
     emoji: '🌿',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop',
+    image: 'https://images.unsplash.com/photo-1532635241-17e820acc59f?w=600&h=450&fit=crop',
     accent: 'from-emerald-900/60',
+  },
+  {
+    label: 'Accessoires',
+    emoji: '🪴',
+    image: 'https://images.unsplash.com/photo-1567225557594-88887e55ce7a?w=600&h=450&fit=crop',
+    accent: 'from-fuchsia-900/60',
+  },
+  {
+    label: 'Domotique',
+    emoji: '🏠',
+    image: 'https://images.unsplash.com/photo-1558618047-3caa1a3e8b58?w=600&h=450&fit=crop',
+    accent: 'from-blue-900/60',
+  },
+  {
+    label: 'Bureau',
+    emoji: '🖥️',
+    image: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&h=450&fit=crop',
+    accent: 'from-teal-900/60',
+  },
+  {
+    label: 'Enfants',
+    emoji: '🧸',
+    image: 'https://images.unsplash.com/photo-1566140967404-b8b3932483f5?w=600&h=450&fit=crop',
+    accent: 'from-yellow-900/60',
   },
 ]
 
@@ -127,7 +151,7 @@ export default async function AmeublementPage({
               </div>
               <div className="w-px bg-white/10" />
               <div>
-                <p className="text-[28px] font-bold text-white">8</p>
+                <p className="text-[28px] font-bold text-white">12</p>
                 <p className="text-[13px] text-[#b0a090]">Catégories</p>
               </div>
             </div>
@@ -146,7 +170,7 @@ export default async function AmeublementPage({
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
           {ROOMS.map(({ label, emoji, image, accent }) => (
             <div
               key={label}

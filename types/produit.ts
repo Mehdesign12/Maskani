@@ -7,6 +7,10 @@ export type ProduitCategory =
   | 'luminaires'
   | 'tapis-textiles'
   | 'terrasse'
+  | 'accessoires'
+  | 'domotique'
+  | 'bureau'
+  | 'enfants'
 
 export type ProduitStyle =
   | 'moderne'
