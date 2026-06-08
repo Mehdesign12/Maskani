@@ -116,7 +116,7 @@ export function OnboardingOverlay() {
             {/* Cards */}
             <div className="grid gap-3 sm:grid-cols-3">
               {INTENTS.map(({
-                id, icon: Icon, iconBg, iconColor,
+                id, href, icon: Icon, iconBg, iconColor,
                 accentBorder, accentBg, accentRing, accentText,
                 label, description, comingSoon,
               }, i) => {
