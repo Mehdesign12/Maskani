@@ -29,9 +29,9 @@ const DISTRICTS: Record<string, string[]> = {
   Agadir: ['Founty', 'Talborjt', 'Sonaba'],
 }
 
-const TYPES = ['appartement', 'villa', 'riad', 'terrain', 'bureau', 'local', 'studio'] as const
+export const TYPES = ['appartement', 'villa', 'riad', 'terrain', 'bureau', 'local', 'studio'] as const
 
-const TYPE_LABELS: Record<string, string> = {
+export const TYPE_LABELS: Record<string, string> = {
   appartement: 'Appartement',
   villa: 'Villa',
   riad: 'Riad',
