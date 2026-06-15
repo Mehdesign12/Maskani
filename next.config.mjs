@@ -12,7 +12,7 @@ const securityHeaders = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-eval' 'unsafe-inline' *.vercel.app",
       "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
-      "img-src 'self' data: blob: *.supabase.co *.mapbox.com images.unsplash.com",
+      "img-src 'self' data: blob: *.supabase.co *.mapbox.com images.unsplash.com i.pravatar.cc api.dicebear.com",
       "connect-src 'self' *.supabase.co *.mapbox.com api.openai.com",
       "font-src 'self' fonts.gstatic.com",
     ].join('; '),
@@ -26,6 +26,8 @@ const nextConfig = {
       { protocol: 'https', hostname: '*.supabase.co' },
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: '*.mapbox.com' },
+      { protocol: 'https', hostname: 'i.pravatar.cc' },
+      { protocol: 'https', hostname: 'api.dicebear.com' },
     ],
   },
   async headers() {

@@ -5,7 +5,7 @@ export default createMiddleware(routing)
 
 export const config = {
   matcher: [
-    // All paths except: api routes, Next.js internals, Vercel, static files
-    '/((?!api|_next|_vercel|.*\\..*).*)',
+    // All paths except: api routes, admin back-office, Next.js internals, Vercel, static files
+    '/((?!api|admin|_next|_vercel|.*\\..*).*)',
   ],
 }
