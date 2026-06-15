@@ -5,6 +5,7 @@ import type {
   AdminUserStatus,
   ReportStatus,
   ReviewStatus,
+  SubscriptionPlan,
 } from './types'
 
 export type StatusTone = 'green' | 'amber' | 'red' | 'blue' | 'purple' | 'gray'
@@ -46,4 +47,18 @@ export const REVIEW_STATUS_TONES: Record<ReviewStatus, StatusTone> = {
   visible: 'green',
   signale: 'amber',
   masque: 'gray',
+}
+
+export const SUBSCRIPTION_TONES: Record<SubscriptionPlan, StatusTone> = {
+  free: 'gray',
+  basic: 'blue',
+  pro: 'purple',
+  enterprise: 'amber',
+}
+
+export const SUBSCRIPTION_LABELS: Record<SubscriptionPlan, string> = {
+  free: 'Gratuit',
+  basic: 'Basic',
+  pro: 'Pro',
+  enterprise: 'Enterprise',
 }
